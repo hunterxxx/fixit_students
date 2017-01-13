@@ -7,7 +7,7 @@ cache:
   - "./node_modules"
 script:
 - npm run lint
-- npm run integration
+- npm run test:integration
 after_script:
 - npm run coverage
 - npm run countLOC:details
