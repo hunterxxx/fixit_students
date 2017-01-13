@@ -36,7 +36,7 @@ describe('REST API', () => {
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('fairphone17658');
-        payload['fairphone17658'].should.be.a('number').and.equal(0);
+        payload['fairphone17658'].should.be.a('number').and.equal(-1);
       });
     });
 
