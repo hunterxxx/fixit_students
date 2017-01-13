@@ -43,7 +43,7 @@ describe('REST API', () => {
       });
     });
 
-    it('it should reply 400 for not allowed values', () => {
+    it('it should reply 400 for not allowed numbers', () => {
       let opt = JSON.parse(JSON.stringify(options));
       opt.url += 'huw/fairphone17658/a';
       return server.inject(opt).then((response) => {
