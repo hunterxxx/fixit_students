@@ -1,6 +1,5 @@
 # Fixit Students! #
-[![Build Status](https://travis-ci.org/rmeissn/fixit_students.svg?branch=master)](https://travis-ci.org/rmeissn/fixit_students)
-
+[![Build Status](https://travis-ci.org/hunterxxx/fixit_students.svg?branch=master)](https://travis-ci.org/hunterxxx/fixit_students)
 [![Language](https://img.shields.io/badge/Language-Javascript%20ECMA2015-lightgrey.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Framework](https://img.shields.io/badge/Framework-NodeJS%206.9-blue.svg)](https://nodejs.org/)
 [![Webserver](https://img.shields.io/badge/Webserver-Hapi%2016-blue.svg)](http://hapijs.com/)
@@ -8,7 +7,7 @@
 
 This repository contains code of a NodeJS based Microservice. The service has some errors that shall be fixed by students of the Leipzig University, course SWT-16.
 
-**Remember to exchange badge urls when forking!**
+**Remember to exchange urls when forking!**
 
 ### Where to start developing? ###
 ---
