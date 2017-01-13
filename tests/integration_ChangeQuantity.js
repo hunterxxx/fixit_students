@@ -30,7 +30,7 @@ describe('REST API', () => {
   };
 
   context('when trying to change the quantity of an existent item', () => {
-    it('it should reply 400 for not allowed numbers', () => {
+    it('it should reply 400 for not allowed values', () => {
       let opt = JSON.parse(JSON.stringify(options));
       opt.url += 'huw/fairphone17658/-5';
       return server.inject(opt).then((response) => {
@@ -39,7 +39,7 @@ describe('REST API', () => {
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('statusCode', 'error');
-        payload.error.should.be.a('string').and.equal('Bad');
+        payload.error.should.be.a('string').and.equal('Bad Request');
       });
     });
 
@@ -56,7 +56,7 @@ describe('REST API', () => {
       });
     });
 
-    it('it should reply the valid obeject for a valid request', () => {
+    it('it should reply the valid object for a valid request', () => {
       let opt = JSON.parse(JSON.stringify(options));
       opt.url += 'huw/fairphone17658/5';
       return server.inject(opt).then((response) => {
