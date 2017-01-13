@@ -1,6 +1,6 @@
 # Fixit Students! #
 [![Build Status](https://travis-ci.org/rmeissn/fixit_students.svg?branch=master)](https://travis-ci.org/rmeissn/fixit_students)
-[![License](https://img.shields.io/badge/License-MPL%202.0-green.svg)](https://github.com/rmeissn/fixit_students/blob/master/LICENSE)
+
 [![Language](https://img.shields.io/badge/Language-Javascript%20ECMA2015-lightgrey.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Framework](https://img.shields.io/badge/Framework-NodeJS%206.9-blue.svg)](https://nodejs.org/)
 [![Webserver](https://img.shields.io/badge/Webserver-Hapi%2016-blue.svg)](http://hapijs.com/)
