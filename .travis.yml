@@ -8,6 +8,7 @@ cache:
 script:
 - npm run lint
 - npm run test:integration
+- npm run countLOC:details
 after_script:
 - npm run coverage
 - npm run countLOC:details
