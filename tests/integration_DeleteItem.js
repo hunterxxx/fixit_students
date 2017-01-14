@@ -36,8 +36,8 @@ describe('REST API', () => {
         response.statusCode.should.equal(404);
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
-        payload.should.be.an('object').and.contain.keys('fairphone17658');
-        payload['fairphone17658'].should.be.a('number').and.equal(0);
+        payload.should.be.an('object').and.contain.keys('statusCode', 'error');
+        payload['fairphone17658'].should.be.a('string').and.equal(0);
       });
     });
 
