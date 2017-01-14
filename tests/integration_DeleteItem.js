@@ -32,12 +32,12 @@ describe('REST API', () => {
       let opt = JSON.parse(JSON.stringify(options));
       opt.url += 'huw/fairphone17658';
       return server.inject(opt).then((response) => {
-        response.should.be.an('object').and.contain.keys('statusCode', 'payload');
-        response.statusCode.should.equal(404);
+        response.should.be.an('object').and.contain.keys('statusCode', 'payload', 'headers');
+        response.statusCode.should.equal(200);
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
-        payload.should.be.an('object').and.contain.keys('statusCode', 'error');
-        payload['fairphone17658'].should.be.a('number').and.equal(0);
+        payload.should.be.an('object').and.contain.keys('fairphone17658');
+        payload['fairphone17658'].should.equal(-1);
       });
     });
 
