@@ -32,11 +32,11 @@ describe('REST API', () => {
       opt.url += 'huw/fairphone17658';
       return server.inject(opt).then((response) => {
         response.should.be.an('object').and.contain.keys('statusCode', 'payload', 'headers');
-        response.statusCode.should.equal(404);
+        response.statusCode.should.equal(200);
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('fairphone17658');
-        payload['fairphone17658'].should.be.a('number').and.equal(0);
+        payload['fairphone17658'].should.be.a('number').and.equal(-1);
       });
     });
 
@@ -49,7 +49,7 @@ describe('REST API', () => {
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('statusCode', 'error');
-        payload.error.should.be.a('string').and.equal('Conflict');
+        payload.error.should.be.a('string').and.equal('Not Found');
       });
     });
   });
