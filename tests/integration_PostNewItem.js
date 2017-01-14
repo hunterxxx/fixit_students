@@ -52,5 +52,6 @@ describe('REST API', () => {
         payload.error.should.be.a('string').and.equal('Conflict');
       });
     });
+
   });
 });

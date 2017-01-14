@@ -26,14 +26,13 @@ describe('REST API', () => {
     },
   };
 
-
-  context('when trying to delete an item into a user basket', () => {
-    it('it should reply with the current basket for successfully deleted items', () => {
+   context('when trying to insert an item into a user basket', () => {
+    it('it should reply with the current basket for successfully added items', () => {
       let opt = JSON.parse(JSON.stringify(options));
       opt.url += 'huw/fairphone17658';
       return server.inject(opt).then((response) => {
         response.should.be.an('object').and.contain.keys('statusCode', 'payload', 'headers');
-        response.statusCode.should.equal(404);
+        response.statusCode.should.equal(200);
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('fairphone17658');
@@ -41,19 +40,17 @@ describe('REST API', () => {
       });
     });
 
-    it('it should reply with 404 for already deleted items', () => {
+    it('it should reply with 409 for already existing items', () => {
       let opt = JSON.parse(JSON.stringify(options));
       opt.url += 'huw/fairphone17658';
       return server.inject(opt).then((response) => {
         response.should.be.an('object').and.contain.keys('statusCode', 'payload');
-        response.statusCode.should.equal(404);
+        response.statusCode.should.equal(409);
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('statusCode', 'error');
-        payload.error.should.be.a('string').and.equal('Not Found');
+        payload.error.should.be.a('string').and.equal('Conflict');
       });
     });
   });
-
-
 });
