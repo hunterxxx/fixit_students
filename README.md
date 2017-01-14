@@ -32,7 +32,7 @@ Since we're developing our application with NodeJS, we're using [npm](https://do
 npm run lint
 
 # Run unit tests
-npm run unit:test
+npm run test:unit
 
 # Start the application
 npm start
