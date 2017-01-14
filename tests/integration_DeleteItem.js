@@ -26,7 +26,7 @@ describe('REST API', () => {
     },
   };
 
-   context('when trying to insert an item into a user basket', () => {
+  context('when trying to insert an item into a user basket', () => {
     it('it should reply with the current basket for successfully added items', () => {
       let opt = JSON.parse(JSON.stringify(options));
       opt.url += 'huw/fairphone17658';
