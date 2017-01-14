@@ -26,6 +26,7 @@ describe('REST API', () => {
     },
   };
 
+//There is no delete method?
   context('when trying to delete an item into a user basket', () => {
     it('it should reply with the current basket for successfully deleted items', () => {
       let opt = JSON.parse(JSON.stringify(options));
@@ -36,7 +37,7 @@ describe('REST API', () => {
         response.payload.should.be.a('string');
         let payload = JSON.parse(response.payload);
         payload.should.be.an('object').and.contain.keys('fairphone17658');
-        payload['fairphone17658'].should.be.a('number').and.equal(-1);
+        payload['fairphone17658'].should.equal(-1);
       });
     });
 

@@ -3,6 +3,7 @@
 const boom = require('boom');
 
 let users = {};
+let senseless = 'Welcome students!';
 
 module.exports = {
   saveItem: function(request, reply) {
